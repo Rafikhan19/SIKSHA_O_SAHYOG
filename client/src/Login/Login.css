@@ -1,0 +1,65 @@
+/* login.css */
+.app_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .login_container {
+    background-image: linear-gradient(to right, rgba(244, 139, 139, 0.941), rgb(170, 5, 247));
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: rgb(14, 14, 14);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .login_container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .logbt {
+    margin-top: 10px;
+    color: #000;
+  }
+  
+  .logbt:hover {
+    opacity: 0.8;
+  }
+  
+  p {
+    margin-top: 10px;
+    color: white;
+  }
+  
+  a {
+    color: #131212;
+  }
+  
+  a:hover {
+    color: #007bff;
+  }
+  
+  @media (max-width: 576px) {
+    .login_container {
+      padding: 15px;
+    }
+  
+    .logbt {
+      margin-top: 15px;
+    }
+  
+    .login_container h2 {
+      font-size: 24px;
+    }
+  }
