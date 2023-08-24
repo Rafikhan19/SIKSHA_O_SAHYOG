@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './Login.css';
-const Login = () => {
+const LoginStudent = () => {
   return (
     <div className="app_login" >
 
@@ -47,4 +47,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default LoginStudent

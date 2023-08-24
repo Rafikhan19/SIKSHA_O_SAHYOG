@@ -11,10 +11,10 @@ const Student = () => {
       <div className='content-container'>
         <img src={img1} alt='image' className='background-image' />
         <div className='button-container'>
-          <Link to="/login" className="btn">
+          <Link to="/student/login" className="btn">
             Login
           </Link>
-          <Link to="/Signup" className="btn">
+          <Link to="/student/signup" className="btn">
             Signup
           </Link>
         </div>

@@ -9,8 +9,8 @@ const Option = () => {
     <h1 className='head'>The 1st Teachers and Student based community</h1>
     <p>We are trying to resolve your assignment problems</p>
     <div className='button2'>
-    <Link to='/teachers' className='op_button btn '>Teachers login </Link>
-    <Link to='/students' className='op_button btn '>Students login</Link>
+    <Link to='/teachers' className='op_button btn '>Teachers Zone </Link>
+    <Link to='/students' className='op_button btn '>Students Zone</Link>
 
     </div>
    

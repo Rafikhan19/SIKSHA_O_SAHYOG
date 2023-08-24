@@ -41,10 +41,10 @@ const Teacher = () => {
       <h1 className='tZ'>Teacher's Zone</h1>
       <div className='content-container'>
         <div className='button-container'>
-          <Link to="/login" className="btn">
+          <Link to="/teacher/login" className="btn">
             Login
           </Link>
-          <Link to="/Signup" className="btn">
+          <Link to="/teacher/signup" className="btn">
             Signup
           </Link>
         </div>
