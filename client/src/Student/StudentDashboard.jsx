@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Assignments from '../utils/Assignments';
 import studentimg from '../assets/student.png'
 import './Student.css';
-import UploadComponent from './Uploadcomponent/Uploadcomponent';
+
 const StudentDashboard = () => {
     const [student] = useState({
         id: '2141011034',
@@ -43,10 +43,10 @@ const StudentDashboard = () => {
             </div>
             
         </div>  
-        <div className='student_assignment'>
+       
         <Assignments assignments={assignments} onViewAssignment={onViewAssignment} />
-        </div>
-       <UploadComponent />
+        
+       
        </div>
         </div>
         </div>
