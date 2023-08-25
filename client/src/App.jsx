@@ -8,6 +8,7 @@ import LoginTeacher from './Login/LoginTeacher'
 import Teacher from './Teacher/Teacher'
 import Option from './option/option'
 import Student from './Student/Student'
+import StudentDashboard from './Student/StudentDashboard'
 function App() {
  
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/teacher/signup" element={<TeacherSignup />}></Route>
       <Route path="/student/login" element={<LoginStudent />}></Route>
       <Route path="/student/signup" element={<StudentSignup />}></Route>
+      <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
       
     </Routes>
   </BrowserRouter>
