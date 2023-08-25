@@ -102,7 +102,7 @@ const [email, setEmail] = useState('');
             </button>
             </form>
             <p style={{margin:"2px"}}>Don't Have An Account?</p>
-            <Link to="/teacher/signup" className=" logbt btn btn-default border w-100 bg-light rounded-0 text-decoration-none" style={{margin:"0px"}}>
+            <Link to="/teacher/signup" className=" logbt btn btn-default  w-100  rounded-0 text-decoration-none" style={{margin:"0px"}}>
               Sign Up
             </Link>
           
