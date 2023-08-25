@@ -9,6 +9,7 @@ import Teacher from './Teacher/Teacher'
 import Option from './option/option'
 import Student from './Student/Student'
 import StudentDashboard from './Student/StudentDashboard'
+import TeacherDashboard from './Teacher/TeacherDashboard'
 function App() {
  
   return (
@@ -22,7 +23,7 @@ function App() {
       <Route path="/student/login" element={<LoginStudent />}></Route>
       <Route path="/student/signup" element={<StudentSignup />}></Route>
       <Route path="/student/dashboard" element={<StudentDashboard />}></Route>
-      
+      <Route path="/teacher/dashboard" element={<TeacherDashboard />}></Route>
     </Routes>
   </BrowserRouter>
     

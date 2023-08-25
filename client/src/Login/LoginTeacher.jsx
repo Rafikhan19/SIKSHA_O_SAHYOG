@@ -32,7 +32,7 @@ const [email, setEmail] = useState('');
             });
       }
 
-     
+     navigate('/teacher/dashboard');
     //   navigate('/dashboard'); // Redirect to teacher's dashboard
     } catch (error) {
       console.error('Error logging in:', error);

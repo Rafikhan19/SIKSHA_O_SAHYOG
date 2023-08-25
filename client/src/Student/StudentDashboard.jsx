@@ -6,7 +6,7 @@ import './Student.css';
 const StudentDashboard = () => {
     const [student] = useState({
         id: '2141011034',
-        name: 'RAndom'
+        name: 'Rafi ahmed khan'
       });
     
       const [assignments, setAssignments] = useState([
@@ -38,15 +38,14 @@ const StudentDashboard = () => {
             <img className='student_img' src={studentimg} alt='student_img'></img>
             <div className='student_details'> 
             <p className='student_id'>REG ID: {student.id}</p>
-            <h3 className='student_name'>Name: {student.name}</h3>
-
+            <h3 className='student_name'>{student.name}</h3>
             </div>
             
         </div>  
        
         <Assignments assignments={assignments} onViewAssignment={onViewAssignment} />
         
-       
+      
        </div>
         </div>
         </div>

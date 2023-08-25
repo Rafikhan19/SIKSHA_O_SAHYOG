@@ -6,7 +6,7 @@ const Assignments = ({ assignment, onView }) => {
       <div className="assignment-item">
         <h4 className='assignment_tilte'>{assignment.title}</h4>
         <div className='assignment_p'>
-        <p className='assignment_sts' >Status: {assignment.viewed ? 'Viewed' : 'Pending'}</p>
+        <p className='assignment_sts' >St: {assignment.viewed ? 'Viewed' : 'Pending'}</p>
         <button className='Assignment_button' onClick={() => onView(assignment.id)}>View Assignment</button>
         </div>
       </div>

@@ -86,7 +86,7 @@ const StudentSignup = () => {
               </button>
               </form>
               <p style={{margin:"2px"}}>Already Have an Account?</p>
-              <Link to="/teacher/login" className="btn btn-default  w-100  rounded-0 text-decoration-none" style={{margin:"0px"}}>
+              <Link to="/student/login" className="btn btn-default  w-100  rounded-0 text-decoration-none" style={{margin:"0px"}}>
                 Login
               </Link>
             
