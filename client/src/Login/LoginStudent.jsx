@@ -31,7 +31,7 @@ const LoginStudent = () => {
             });
       }
 
-     
+         navigate('/student/dashboard');
     //   navigate('/dashboard'); // Redirect to teacher's dashboard
     } catch (error) {
       console.error('Error logging in:', error);

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Assignments from '../utils/Assignments';
-
+import studentimg from '../assets/student.png'
+import './Student.css';
+import UploadComponent from './Uploadcomponent/Uploadcomponent';
 const StudentDashboard = () => {
     const [student] = useState({
-        id: '123',
+        id: '2141011034',
         name: 'RAndom'
       });
     
@@ -24,13 +26,29 @@ const StudentDashboard = () => {
       };
     
       return (
+        <div className='student_dashboard'>
         <div className="app">
+        <div className='app_2'>
         <div className="student-info">
-            <h2>Student Information</h2>
-            <p>ID: {student.id}</p>
-            <p>Name: {student.name}</p>
+            <div className='student_info_heading'>
+            <h5 className='student_clg'>Institutue of Technical Education and Reasearch</h5>
+            <h5 className='student_branch'>branch : cse</h5>
+            
+            </div>
+            <img className='student_img' src={studentimg} alt='student_img'></img>
+            <div className='student_details'> 
+            <p className='student_id'>REG ID: {student.id}</p>
+            <h3 className='student_name'>Name: {student.name}</h3>
+
+            </div>
+            
         </div>  
+        <div className='student_assignment'>
         <Assignments assignments={assignments} onViewAssignment={onViewAssignment} />
+        </div>
+       <UploadComponent />
+       </div>
+        </div>
         </div>
       );
 }
