@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import './Login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { auth, signInWithEmailAndPassword } from '../utils/firebase.js';
 import { useNavigate } from 'react-router-dom';
-
+import './Login.css';
 
 const LoginStudent = () => {
   const [collegeId, setCollegeId] = useState('');
@@ -102,7 +101,7 @@ const LoginStudent = () => {
             </button>
             </form>
             <p style={{margin:"2px"}}>Don't Have An Account?</p>
-            <Link to="/teacher/signup" className=" logbt btn btn-default border w-100 bg-light rounded-0 text-decoration-none" style={{margin:"0px"}}>
+            <Link to="/teacher/signup" className=" logbt btn btn-default  w-100 rounded-0 text-decoration-none" style={{margin:"0px"}}>
               Sign Up
             </Link>
           

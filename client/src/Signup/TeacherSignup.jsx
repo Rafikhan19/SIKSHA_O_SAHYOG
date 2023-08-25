@@ -83,7 +83,7 @@ const TeacherSignup = () => {
               </button>
               </form>
               <p style={{margin:"2px"}}>Already Have an Account?</p>
-              <Link to="/teacher/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none" style={{margin:"0px"}}>
+              <Link to="/teacher/login" className="btn btn-default  w-100  rounded-0 text-decoration-none" style={{margin:"0px"}}>
                 Login
               </Link>
             
