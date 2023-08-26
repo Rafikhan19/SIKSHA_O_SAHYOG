@@ -1,13 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Assignments from '../utils/Assignments';
 import studentimg from '../assets/student.png'
 import './Student.css';
+import { auth , db } from '../utils/firebase';
+import { doc, getDoc } from "firebase/firestore";
+import { Navigate } from 'react-router-dom';
 
-const StudentDashboard = () => {
-    const [student] = useState({
-        id: '2141011034',
-        name: 'Rafi ahmed khan'
-      });
+const StudentDashboard = ({ user }) => {
+    const [studentData, setStudentData] = useState(null);
+    
+    useEffect(() => {
+      const fetchStudentData = async () => {
+        if (user) {
+          const userId = user.uid;
+          const studentRef = doc(db, 'students', userId);
+  
+          try {
+            const docSnap = await getDoc(studentRef);
+            if (docSnap.exists()) {
+              setStudentData(docSnap.data());
+            } else {
+              console.log('No student data found');
+            }
+          } catch (error) {
+            console.error('Error fetching student data:', error);
+          }
+        }
+      };
+  
+      fetchStudentData();
+    }, [user]);
+
+    //collegeId, 
+    
     
       const [assignments, setAssignments] = useState([
         { id: 1, title: 'Assignment 1', viewed: false },
@@ -25,6 +50,15 @@ const StudentDashboard = () => {
         );
       };
     
+      const handleLogout = async () => {
+        try {
+          await auth.signOut();
+          return <Navigate to="/student/login" />;
+        } catch (error) {
+          console.error('Error logging out:', error);
+        }
+      };
+
       return (
         <div className='student_dashboard'>
         <div className="app">
@@ -37,15 +71,15 @@ const StudentDashboard = () => {
             </div>
             <img className='student_img' src={studentimg} alt='student_img'></img>
             <div className='student_details'> 
-            <p className='student_id'>REG ID: {student.id}</p>
-            <h3 className='student_name'>{student.name}</h3>
+            <p className='student_id'>REG ID: {studentData?.collegeId}</p>
+            <h3 className='student_name'>{studentData?.name}</h3>
             </div>
             
         </div>  
        
         <Assignments assignments={assignments} onViewAssignment={onViewAssignment} />
         
-      
+        <button onClick={handleLogout}>Logout</button>
        </div>
         </div>
         </div>
