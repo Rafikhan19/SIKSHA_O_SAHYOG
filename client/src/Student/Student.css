@@ -74,13 +74,12 @@ p{
 
  
 .student_dashboard{
-  
+    
     margin: 0;
     padding: 0;
-    
+    height:110vh;
     background-image: linear-gradient(to right, rgba(19, 19, 19, 0.941), rgb(9, 9, 9));
-    
-
+  
 }
  .student_info_heading{
  
@@ -195,8 +194,9 @@ margin-top: 10px;
  font-size: 20px;
  border: none;
  background:#edf2f8 ;
- margin-left: 900px;
- margin-top: -300px;
+ position: relative;
+ margin-left:60vw ;
+ margin-top: 5vh;
 
 }
 .dashboard_logout:hover{
