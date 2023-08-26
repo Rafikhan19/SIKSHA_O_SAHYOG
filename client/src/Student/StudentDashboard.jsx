@@ -5,6 +5,7 @@ import './Student.css';
 import { auth , db } from '../utils/firebase';
 import { doc, getDoc } from "firebase/firestore";
 import { Navigate } from 'react-router-dom';
+import ProfileUploader from '../Teacher/ProfileUploader'
 
 const StudentDashboard = ({ user }) => {
     const [studentData, setStudentData] = useState(null);
@@ -67,9 +68,10 @@ const StudentDashboard = ({ user }) => {
             <div className='student_info_heading'>
             <h5 className='student_clg'>Institutue of Technical Education and Reasearch</h5>
             <h5 className='student_branch'>branch : cse</h5>
-            
+            <button className='dashboard_logout' onClick={handleLogout}>Logout</button>
             </div>
-            <img className='student_img' src={studentimg} alt='student_img'></img>
+            <ProfileUploader />
+            
             <div className='student_details'> 
             <p className='student_id'>REG ID: {studentData?.collegeId}</p>
             <h3 className='student_name'>{studentData?.name}</h3>
@@ -79,7 +81,7 @@ const StudentDashboard = ({ user }) => {
        
         <Assignments assignments={assignments} onViewAssignment={onViewAssignment} />
         
-        <button onClick={handleLogout}>Logout</button>
+       
        </div>
         </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Assignments from '../utils/Assignments';
-import studentimg from '../assets/student.png'
+// import studentimg from '../assets/student.png'
+import ProfileUploader from './ProfileUploader';
 import './Teacher.css';
 import { auth , db } from '../utils/firebase';
 import { doc, getDoc } from "firebase/firestore";
@@ -59,6 +60,12 @@ const TeacherDashboard = ({ user }) => {
         }
       };
 
+      var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+      
+
       return (
         <div className='student_dashboard'>
         <div className="app">
@@ -67,19 +74,21 @@ const TeacherDashboard = ({ user }) => {
             <div className='student_info_heading'>
             <h5 className='student_clg'>Institutue of Technical Education and Reasearch</h5>
             <h5 className='student_branch'>branch : cse</h5>
+           <button className='dashboard_logout' onClick={handleLogout}>Logout</button>
             
             </div>
-            <img className='student_img' src={studentimg} alt='student_img'></img>
+            <ProfileUploader />
+            
             <div className='student_details'> 
             <p className='student_id'>Email: {teacherData?.email}</p>
-            <h3 className='student_name'>Welcome{teacherData?.name}</h3>
+            <h3 className='student_name'>Welcome {teacherData?.name}</h3>
             </div>
             
         </div>  
        
         <Assignments assignments={assignments} onViewAssignment={onViewAssignment} />
         
-        <button onClick={handleLogout}>Logout</button>
+
        </div>
         </div>
         </div>

@@ -63,34 +63,31 @@ p{
 
  .app{
     width: 70vw;
-    height: 100vh;
-    /* height: auto; */
-    margin: 0 auto; 
+    margin-left: 220px;
+    margin-bottom: 20px;
     background: rgb(246, 230, 180);
     background: -webkit-linear-gradient(-45deg, rgba(246, 230, 180, 1) 0%, rgba(33, 10, 102, 1) 100%);
     background: linear-gradient(135deg, rgba(246, 230, 180, 1) 0%, rgba(33, 10, 102, 1) 100%);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
  }
- .app_2{
-  /* border: 1px solid rgb(170, 5, 247); */
-  
- }
+ 
 
  
 .student_dashboard{
+  
     margin: 0;
     padding: 0;
-  
+    
     background-image: linear-gradient(to right, rgba(19, 19, 19, 0.941), rgb(9, 9, 9));
     
 
 }
  .student_info_heading{
-  /* width: 50%; */
+ 
   
   height: 180px;
   margin-top: 0px;
-  /* margin-left: 200px; */
+
   background-color: #8e44ad;
 
 
@@ -98,33 +95,74 @@ p{
  }
  .student_clg{
   position: relative;
-  margin-left: 270px;
- color:  rgba(33, 10, 102, 1);
+  margin-left: 350px;
+ color:  rgb(236, 235, 239);
  
  }
  .student_branch{
   margin-top: 10px;
-  margin-left: 410px;
+  margin-left: 500px;
   text-transform: uppercase;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #edf2f8;
  }
 
  .student_img{
-  width: 140px;
-  height: 140px;
+  margin-top: -100px;
+  margin-left: 40px;
+  width: 160px;
+  height: 160px;
   background-color: #f9fafa;
- 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: 4px solid rgb(170, 5, 247);
   border-radius: 120px;
-  margin: 0 auto;
-  margin-top: -100px;
-  margin-left: 400px;
+  /* margin: 0 auto; */
+  color: transparent;
+  /* object-fit: cover; */
 
  }
+ .profile-pic {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  filter: drop-shadow(20px);
+  /* gap: -100px; */
+}
+
+.-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 7px;
+margin-top: 10px;
+  background: whitesmoke;
+  color: #080808;
+  font-weight:200;
+  /* border: 1px solid #ccc; */
+  border-radius: 25px;
+}
+.-label:hover{
+  background: rgba(249, 249, 246, 0.25);
+  box-shadow: 0px 0px 32px 10px rgba(212, 137, 235, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glyphicon {
+  font-size: 24px;
+}
+
+#file {
+  display: none;
+}
+
  .student_img:hover{
   position: sticky;
  border: #f9fafa;
@@ -139,18 +177,32 @@ p{
  
  .student_name{
   margin-top: 0px;
-  margin-left: 23rem;
- color: black;
+  margin-left: 27rem;
+  color: black;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-transform: uppercase;
  }
 .student_id{
-  margin-left: 25rem;
+  margin-left: 29rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-transform: uppercase;
 }
  
+.dashboard_logout{
+ width: 100px;
+ /* height: 50px; */
+ border-radius: 25px;
+ font-size: 20px;
+ border: none;
+ background:#edf2f8 ;
+ margin-left: 900px;
+ margin-top: -300px;
 
+}
+.dashboard_logout:hover{
+ background-color: #acaaaa;
+
+}
  
   
   /* Media Queries for Responsiveness */
@@ -182,8 +234,11 @@ p{
   @media (max-width: 768px) {
 
     .app{
-      width: 100%;
+     margin-left: 0px;
+     width: 100%;
+     
     }
+    
     
     .student_info_heading {
       margin-top: 0px;
@@ -194,25 +249,36 @@ p{
     }
   
     .student_branch {
-      margin-left: 170px;
+      margin-left: 240px;
       margin-top: 20px;
     }
     .student_clg{
       font-size: 15px;
-      margin-left: 100px;
+      margin-left: 150px;
       white-space: nowrap; 
     }
   
     .student_img {
       margin-top: -70px;
-      margin-left: 160px;
+      margin-left: 220px;
       margin-right: auto;
+      
+      
+    }
+    .-label{
+      margin-left: 10px;
+      margin-top: 10px;
     }
     .student_id{
-      margin-left: 170px;
+      margin-left: 230px;
     }
     .student_name{
-      margin-left: 135px;
+      margin-left: 205px;
+    }
+    .dashboard_logout{
+      margin-left: 480px;
+     
+
     }
   }
 
