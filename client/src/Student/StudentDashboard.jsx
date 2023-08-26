@@ -67,7 +67,7 @@ const StudentDashboard = ({ user }) => {
         <div className="student-info">
             <div className='student_info_heading'>
             <h5 className='student_clg'>Institutue of Technical Education and Reasearch</h5>
-            <h5 className='student_branch'>branch : cse</h5>
+            <h5 className='student_branch'>Student branch : cse</h5>
             <button className='dashboard_logout' onClick={handleLogout}>Logout</button>
             </div>
             <ProfileUploader />
