@@ -6,7 +6,7 @@ import { auth, signInWithEmailAndPassword } from '../utils/firebase.js';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
-const LoginStudent = () => {
+const LoginStudent = ({ setUser }) => {
   const [collegeId, setCollegeId] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -17,7 +17,9 @@ const LoginStudent = () => {
       const email = `${collegeId}@example.com`;
       const res = await signInWithEmailAndPassword(auth, email, password);
       // Successful login, redirect or set state accordingly
-      
+      const user = auth.currentUser;
+      setUser(user);
+
       if(res!=null){
         toast('✅ Logged In Successfully', {
             position: "top-right",
