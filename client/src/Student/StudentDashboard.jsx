@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Assignments from '../utils/Assignments';
-import studentimg from '../assets/student.png'
+// import studentimg from '../assets/student.png'
 import './Student.css';
 import { auth , db } from '../utils/firebase';
 import { doc, getDoc } from "firebase/firestore";

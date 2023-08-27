@@ -15,13 +15,17 @@ const ProfileUploader = () => {
         <span className="glyphicon glyphicon-camera"></span>
         <span>Change profile</span> {/* Adding a label for the input */}
       </label>
+      
       <input id="file" type="file" onChange={handleFileChange} />
+      <div className='image'>
       <img
         className='student_img'
         src={imageSrc || profileapp} // Use the selected image or the default image
         id="output"
         alt="Profile"
       />
+      </div>
+      
     </div>
   );
 };

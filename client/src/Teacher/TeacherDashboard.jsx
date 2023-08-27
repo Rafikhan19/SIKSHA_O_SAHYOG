@@ -38,6 +38,9 @@ const TeacherDashboard = ({ user }) => {
       const [assignments, setAssignments] = useState([
         { id: 1, title: 'Assignment 1', viewed: false },
         { id: 2, title: 'Assignment 2', viewed: true },
+        { id: 3, title: 'Assignment 3', viewed: true },
+        { id: 4, title: 'Assignment 4', viewed: true },
+       
         // Add more assignments as needed
       ]);
     
